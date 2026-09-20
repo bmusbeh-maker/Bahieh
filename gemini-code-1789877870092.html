@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahieh Musbeh | Arabic & Quran Educator | Student Mentor</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --primary-hover: #1D4ED8;
+      --secondary: #0D9488;
+      --accent-amber: #F59E0B;
+      --accent-pink: #EC4899;
+      --bg-main: #FAFAFC;
+      --bg-alt: #F1F5F9;
+      --text-dark: #0F172A;
+      --text-muted: #475569;
+      --border-color: #E2E8F0;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .brand-name {
+      font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .bg-light-alt {
+      background-color: var(--bg-alt);
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .brand-badge {
+      font-size: 1.4rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-hover) !important;
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 4rem 0 5rem 0;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFC 100%);
+    }
+
+    .hero-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .greeting-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #EFF6FF;
+      color: var(--primary);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #DBEAFE;
+    }
+
+    .hero-text h1 {
+      font-size: 3.25rem;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .highlight-text {
+      color: var(--primary);
+      background: linear-gradient(120deg, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0) 100%);
+      padding: 0 0.3rem;
+      border-radius: 6px;
+    }
+
+    .hero-subtitle {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .title-tag {
+      background: #F0FDF4;
+      color: #166534;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: 1px solid #BBF7D0;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: 0 6px 18px rgba(30, 58, 138, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-dark);
+      border: 2px solid var(--border-color);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: #F8FAFC;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-frame {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .profile-img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 6px solid #FFFFFF;
+      display: block;
+    }
+
+    .floating-badge {
+      position: absolute;
+      background: white;
+      padding: 0.75rem 1rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border: 1px solid var(--border-color);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .floating-badge i {
+      font-size: 1.5rem;
+      color: var(--accent-amber);
+    }
+
+    .floating-badge strong {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+    }
+
+    .floating-badge span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .badge-1 {
+      top: 15px;
+      left: -25px;
+    }
+
+    .badge-2 {
+      bottom: 20px;
+      right: -20px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Skills Cloud */
+    .skills-cloud {
+      background: #FFFFFF;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .cloud-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+    }
+
+    .skill-chip {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .skill-chip:hover {
+      background: #EFF6FF;
+      border-color: #BFDBFE;
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .skill-chip i {
+      color: var(--secondary);
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .sub-heading {
+      color: var(--secondary);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.25rem;
+      color: var(--text-dark);
+    }
+
+    /* About Cards */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .about-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-blue .card-icon { background: #EFF6FF; color: var(--primary); }
+    .card-teal .card-icon { background: #CCFBF1; color: var(--secondary); }
+    .card-amber .card-icon { background: #FEF3C7; color: var(--accent-amber); }
+
+    .about-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Experience Card */
+    .experience-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .logo-box {
+      background: #FFFFFF;
+      border: 2px solid var(--border-color);
+      border-radius: 20px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .school-logo {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+    }
+
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .exp-title {
+      font-size: 1.6rem;
+      color: var(--text-dark);
+    }
+
+    .exp-institution {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .exp-badge {
+      background: #EFF6FF;
+      color: var(--primary);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .exp-intro {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .exp-bullets {
+      list-style: none;
+    }
+
+    .exp-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      font-size: 0.98rem;
+    }
+
+    .exp-bullets li i {
+      color: var(--secondary);
+      font-size: 1.1rem;
+      margin-top: 3px;
+    }
+
+    /* Projects & Initiatives */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-banner {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-1 { background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); }
+    .banner-2 { background: linear-gradient(135deg, #CCFBF1 0%, #99F6E4 100%); }
+    .banner-3 { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); }
+    .banner-4 { background: linear-gradient(135deg, #FCE7F3 0%, #FBCFE8 100%); }
+
+    .project-emoji {
+      font-size: 3rem;
+    }
+
+    .project-body {
+      padding: 1.5rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .tag-arabic { background: #EFF6FF; color: var(--primary); }
+    .tag-quran { background: #E6FFFA; color: #0D9488; }
+    .tag-mentor { background: #FEF3C7; color: #D97706; }
+
+    .project-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-body p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Kids Corner */
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .quote-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      border: 2px dashed #CBD5E1;
+      position: relative;
+      text-align: center;
+    }
+
+    .quote-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .quote-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+    }
+
+    .quote-author {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    /* Contact Box */
+    .contact-box {
+      background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+      border-radius: var(--radius-lg);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-content p {
+      font-size: 1.15rem;
+      color: #DBEAFE;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-btn {
+      background: white;
+      color: var(--primary);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .location-badge {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.9rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 600;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Footer */
+    .footer {
+      background: white;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 868px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle, .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .logo-box {
+        margin: 0 auto;
+        width: 120px;
+      }
+
+      .exp-top {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .exp-bullets li {
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-lg);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-badge">🌟</span>
+        <span class="brand-name">Sr. Bahieh Musbeh</span>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"><i class="fa-solid fa-user-graduate"></i> About</a></li>
+        <li><a href="#experience"><i class="fa-solid fa-chalkboard-user"></i> Experience</a></li>
+        <li><a href="#initiatives"><i class="fa-solid fa-rocket"></i> Fun Projects</a></li>
+        <li><a href="#kids-corner"><i class="fa-solid fa-child-reaching"></i> Kids Corner</a></li>
+        <li><a href="#contact" class="nav-cta"><i class="fa-solid fa-paper-plane"></i> Say Hello</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <div class="greeting-pill">
+          <span class="wave-emoji">👋</span> As-salamu Alaykum & Welcome!
+        </div>
+        <h1>Hello, I'm <br><span class="highlight-text">Bahieh Musbeh</span></h1>
+        <h2 class="hero-subtitle">
+          <span class="title-tag">📖 Arabic & Quran Teacher</span>
+          <span class="title-tag">🌱 Youth Mentor</span>
+        </h2>
+        <p class="hero-description">
+          Inspiring young minds at <strong>Al-Ghazaly High School</strong> with a love for the Arabic language, Quranic understanding, and joyful classroom learning. Guiding students in grades 6-12 towards academic excellence and confidence!
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#initiatives" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Explore Classroom</a>
+          <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Connect With Me</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="image-frame">
+          <img src="personal_photo.jpg" alt="Bahieh Musbeh Headshot" class="profile-img">
+          
+          <!-- Floating Badge Badges -->
+          <div class="floating-badge badge-1">
+            <i class="fa-solid fa-star"></i>
+            <div>
+              <strong>Teaching Since 2023</strong>
+              <span>Al-Ghazaly High School</span>
+            </div>
+          </div>
+          
+          <div class="floating-badge badge-2">
+            <i class="fa-solid fa-heart"></i>
+            <div>
+              <strong>100+ Students</strong>
+              <span>Mentored & Guided</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Highlight Cloud -->
+  <section class="skills-cloud">
+    <div class="cloud-container">
+      <div class="skill-chip"><i class="fa-solid fa-book-quran"></i> Quranic Studies & Tajweed</div>
+      <div class="skill-chip"><i class="fa-solid fa-language"></i> Arabic Grammar & Fluency</div>
+      <div class="skill-chip"><i class="fa-solid fa-gamepad"></i> Interactive Educational Games</div>
+      <div class="skill-chip"><i class="fa-solid fa-graduation-cap"></i> College Recommendations</div>
+      <div class="skill-chip"><i class="fa-solid fa-hands-holding-child"></i> Youth Leadership</div>
+      <div class="skill-chip"><i class="fa-solid fa-pencil"></i> Annual Curriculum Design</div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section container" id="about">
+    <div class="section-header">
+      <span class="sub-heading">✨ GET TO KNOW ME</span>
+      <h2>Teaching with Passion & Purpose</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card card-blue">
+        <div class="card-icon"><i class="fa-solid fa-shapes"></i></div>
+        <h3>Interactive Learning</h3>
+        <p>Learning Arabic is an adventure! We bring lessons to life through structured vocabulary games, collaborative dialogs, and real-world practice.</p>
+      </div>
+
+      <div class="about-card card-teal">
+        <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+        <h3>Nurturing Values</h3>
+        <p>In Quranic studies, we focus not only on correct recitation (Tajweed) but on understanding beautiful moral values that build strong character.</p>
+      </div>
+
+      <div class="about-card card-amber">
+        <div class="card-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+        <h3>Student Mentorship</h3>
+        <p>From guiding 6th graders to assisting 12th graders with college recommendation letters, I support every student's unique journey to success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Timeline Section -->
+  <section class="section bg-light-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-heading">🏫 MY JOURNEY</span>
+        <h2>Teaching Experience</h2>
+      </div>
+
+      <div class="experience-card">
+        <div class="logo-box">
+          <img src="ghazali_logo.png" alt="Al-Ghazaly High School Logo" class="school-logo">
+        </div>
+
+        <div class="exp-details">
+          <div class="exp-top">
+            <div>
+              <h3 class="exp-title">Arabic & Quran Educator</h3>
+              <p class="exp-institution">Al-Ghazaly High School | Islamic Education Foundation of NJ</p>
+            </div>
+            <span class="exp-badge"><i class="fa-solid fa-calendar-check"></i> 2023 – Present</span>
+          </div>
+
+          <p class="exp-intro">
+            Serving as a lead Arabic and Quran teacher for middle and high school students (Grades 6, 7, 8, 10, and 12).
+          </p>
+
+          <ul class="exp-bullets">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Curriculum Excellence:</strong> Developed annual course plans and comprehensive unit lessons using the <em>العربية بين يديك</em> curriculum series.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Quran Recitation:</strong> Led Tajweed instruction and Quranic comprehension activities fostering student engagement.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Student Advocacy:</strong> Wrote personalized college letters of recommendation and mentored students through academic milestones.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>School Leadership:</strong> Coordinated key school functions, student activities, and high school graduation ceremonies.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fun Projects & Initiatives -->
+  <section class="section container" id="initiatives">
+    <div class="section-header">
+      <span class="sub-heading">🎨 CLASSROOM HIGHLIGHTS</span>
+      <h2>Fun Projects & Learning Initiatives</h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="arabic">Arabic Fun</button>
+      <button class="filter-btn" data-filter="quran">Quran & Tajweed</button>
+      <button class="filter-btn" data-filter="mentorship">Mentorship</button>
+    </div>
+
+    <div class="projects-grid">
+      
+      <div class="project-item" data-category="arabic">
+        <div class="project-banner banner-1">
+          <span class="project-emoji">🗣️</span>
+        </div>
+        <div class="project-body">
+          <span class="category-tag tag-arabic">Arabic Language</span>
+          <h3>Conversational Dialog Units</h3>
+          <p>Interactive role-play exercises where students practice real-life Arabic conversations, greetings, and vocabulary with peers.</p>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="quran">
+        <div class="project-banner banner-2">
+          <span class="project-emoji">📖</span>
+        </div>
+        <div class="project-body">
+          <span class="category-tag tag-quran">Quranic Studies</span>
+          <h3>Tajweed & Recitation Circle</h3>
+          <p>Step-by-step recitation workshops helping students master correct pronunciation and appreciate the beauty of Quranic verses.</p>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="mentorship">
+        <div class="project-banner banner-3">
+          <span class="project-emoji">🎓</span>
+        </div>
+        <div class="project-body">
+          <span class="category-tag tag-mentor">College Mentorship</span>
+          <h3>Senior Recommendation & Guidance</h3>
+          <p>Supporting graduating high school seniors with personalized college recommendation letters, resume building, and college application readiness.</p>
+        </div>
+      </div>
+
+      <div class="project-item" data-category="arabic">
+        <div class="project-banner banner-4">
+          <span class="project-emoji">📚</span>
+        </div>
+        <div class="project-body">
+          <span class="category-tag tag-arabic">Arabic Language</span>
+          <h3>Annual Arabic Reading Challenge</h3>
+          <p>An engaging story-reading program encouraging middle school students to read Arabic children's literature and share summaries in class.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Kids Corner / Encouragement -->
+  <section class="section bg-light-alt" id="kids-corner">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-heading">🌟 FOR MY STUDENTS</span>
+        <h2>Sr. Bahieh's Words of Inspiration</h2>
+      </div>
+
+      <div class="quotes-grid">
+        <div class="quote-card">
+          <div class="quote-icon">💡</div>
+          <p class="quote-text">"Knowledge is a bright light that shines upon your journey. Every small step you take today builds a giant leap for your future!"</p>
+          <span class="quote-author">— Sr. Bahieh Musbeh</span>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-icon">🌟</div>
+          <p class="quote-text">"Learning the language of the Quran connects your heart with wisdom, kindness, and understanding."</p>
+          <span class="quote-author">— Classroom Motto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section class="section container" id="contact">
+    <div class="contact-box">
+      <div class="contact-content">
+        <h2>Let's Get in Touch! 💬</h2>
+        <p>Are you a parent, student, or educator looking to connect? I'd love to hear from you!</p>
+        
+        <div class="contact-buttons">
+          <a href="mailto:bmusbeh@iefschools.org" class="contact-btn">
+            <i class="fa-solid fa-envelope"></i> bmusbeh@iefschools.org
+          </a>
+          <div class="location-badge">
+            <i class="fa-solid fa-location-dot"></i> Al-Ghazaly High School, NJ
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <strong>Bahieh Musbeh</strong> | Educator & Mentor
+      </div>
+      <p class="footer-copy">&copy; 2026 Sr. Bahieh Musbeh. Built for students & school community.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Navigation Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+          });
+        });
+      }
+
+      // Project Filtering System
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          projectItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (filterValue === 'all' || filterValue === category) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
